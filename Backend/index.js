@@ -218,7 +218,7 @@ app.get('/popularinchildren',async (req,res)=>{
   const fetchUser = async (req,res,next)=>{
     const token = req.header('auth-token');
     if (!token) {
-        res.status(401).send({errors:"Please authenticate using valid tolen"})
+        res.status(401).send({errors:"Please authenticate using valid token"})
     }
     else{
       try {
